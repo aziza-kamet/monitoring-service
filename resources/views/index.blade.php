@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Web Resources</title>
 </head>
 <body>
     <div class="container">
@@ -30,6 +30,13 @@
                 @endforeach
             </tbody>
         </table>
+
+        <form method="post" action="{{route('web-resources.check')}}">
+            {{csrf_field()}}
+            <a href="{{route('main')}}" class="btn btn-success">Create web resource</a>
+            <button class="btn btn-info">Check web resources</button>
+            <a href="{{route('web-resources.logs')}}" class="btn btn-link">Logs</a>
+        </form>
     </div>
 
     <!-- Optional JavaScript -->

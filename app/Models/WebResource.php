@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class WebResource extends Model
 {
@@ -13,4 +14,9 @@ class WebResource extends Model
         'name',
         'url'
     ];
+
+    public function logs(): HasMany
+    {
+        return $this->hasMany(WebResourceLog::class);
+    }
 }

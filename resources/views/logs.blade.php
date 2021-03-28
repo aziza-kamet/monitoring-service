@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Web Resources</title>
 </head>
 <body>
     <div class="container">
@@ -22,8 +22,8 @@
             <tbody>
                 @foreach($logs as $log)
                     <tr>
-                        <td>{{$resource->webResource->url}}</td>
-                        <td>{{$resource->requested_at}}</td>
+                        <td>{{$log->webResource->url}}</td>
+                        <td>{{$log->requested_at}}</td>
                     </tr>
                 @endforeach
             </tbody>

@@ -4,15 +4,20 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class WebResourceLog extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = null;
-    public $timestamps = null;
+    public $timestamps = false;
 
-    public function webResource()
+    protected $fillable = [
+        'web_resource_id',
+        'requested_at'
+    ];
+
+    public function webResource(): BelongsTo
     {
         return $this->belongsTo(WebResource::class);
     }
